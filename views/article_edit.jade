@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title 写文章
+    link(rel='stylesheet', href='/public/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/public/css/simditor.css')
+    link(rel='stylesheet', href='/public/css/font-awesome.css')
+    style
+      |.chose-tag a{
+      |margin-bottom: 10px;
+      |margin-right:10px;
+      ||}
+  body
+    .container
+      h1 写文章
+      - var m = article ? "edit" : "add"
+      form#form(action='/home/article/#{m}', method='post', role='form')
+        .form-group
+          if(article)
+            input(name="aid" value="#{article.id}" type="hidden")
+            input#title.form-control(placeholder='标题', type='text', name='title',value="#{article.title}")
+            br
+            .editor
+              textarea#editor(placeholder='这里输入内容', autofocus='', name="content") #{article.content}
+          else
+            input#title.form-control(placeholder='标题', type='text', name='title')
+            br
+            .editor
+              textarea#editor(placeholder='这里输入内容', autofocus='', name="content")
+          br
+          .row
+            .col-md-3
+              a#save.btn.btn-primary.btn-lg(href='javascript:') 保存
+            .col-md-1
+              #tip
+      hr
+      h2  添加标签
+      .row
+        .col-md-6
+          input.form-control(type='text', name='tags', placeholder='标签')
+          br
+          a#addtag.btn.btn-primary(href="javascript:") 添加
+        .col-md-6
+          .chose-tag
+            each tag in tags
+              a.btn.btn-default(href='javascript:' data-tag="#{tag.tag}" class=tag.className) #{tag.tag}(#{tag.count})
+            
+    script(src='/public/js/jquery.1.10.min.js', type='text/javascript')
+    script(src='/public/js/bootstrap.min.js', type='text/javascript')
+    script(type='text/javascript', src='/public/js/simditor/module.js')
+    script(type='text/javascript', src='/public/js/simditor/uploader.js')
+    script(type='text/javascript', src='/public/js/simditor/simditor.js')
+    script(type="text/javascript", src="/public/js/article_edit.js")

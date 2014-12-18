@@ -1,0 +1,16 @@
+each art in articles
+  article(id="article_#{art.id}" data-aid="#{art.id}")
+    h1
+      a(href='/article/#{art.id}.html') #{art.title}
+    div.meta.group
+      div.date.fl
+        span.glyphicon.mr5.glyphicon-calendar
+        - var date = new Date(art.date_create)
+        span #{date.getFullYear()}-#{date.getMonth()}-#{date.getDate()}
+      if art.tags.length
+        div.tags.fl
+          span.glyphicon.glyphicon-th.mr5
+          span 标签：
+          each t in art.tags
+            a.tag(href="/tag/#{t}",target="_blank") #{t}
+    div.body !{art.content}

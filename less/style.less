@@ -1,0 +1,85 @@
+// out: ../css/style.css, compress: true, strictMath: true
+@import "lib/funclib.less";
+@import "lib/layout_tools.less";
+
+body{
+  background:url("../images/subtle_white_mini_waves.png") 0 0 ;
+}
+
+.content{
+    width: 1000px;
+    padding: 0 10px 50px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    box-shadow: 0px 1px 30px rgba(100,100,100,0.3);
+}
+h1 {
+    font-size: 28px;
+    font-family: 'Roboto Slab', serif;
+    color:#444;
+    font-weight: bold;
+    
+    a{
+        .trans();
+        &:hover{
+            text-decoration: none;
+            color: #a48b46;
+        }
+    }
+}
+
+article {
+    margin: 20px;
+    border-bottom: 1px solid #e2e2e2;
+    
+    .body {
+        color: #5f5f5f;
+        font-size: 16px;
+        line-height: 1.8em;
+        word-break: break-all;
+        overflow: hidden;
+        margin-top: 20px;
+        p {
+            margin: 0;
+            margin-bottom: 1em;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.date {
+    font-size: 14px;
+    color: #888;
+
+}
+
+.meta{
+    padding-bottom: 10px;
+//    border-bottom: 1px solid #d1caca;
+}
+.tags {
+    margin-left:30px;
+    color: #888;
+    font-size: 12px;
+    .tag{
+//        display: block;
+//        float: left;
+        .vm(20px);
+//        padding: 0 10px;
+        .bdrs(6px);
+//        background-color: #888;
+        color: #888;
+        margin-right: 10px;
+        font-family: '微软雅黑';
+//        .trans(300ms);
+        &:hover{
+//            text-decoration: none;
+//            background-color: #eceae4;
+//            color: #888;
+        }
+    }
+}
+
+

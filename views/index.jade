@@ -1,0 +1,16 @@
+html(lang='zh-cn')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title #{title}
+    link(rel='stylesheet', href='/public/css/glyphicon.css')
+    link(rel='stylesheet', href='/public/css/style.css')
+    link(rel='stylesheet', href='/public/js/prettify/prettify.css')
+  body
+    div.content.mid
+      include articles.jade
+    script(src='/public/js/jquery.1.10.min.js')
+    script(src="/public/js/jquery.cookie.js")
+    script(src="/public/js/prettify/prettify.js")
+    script(src="/public/js/index.js")

@@ -1,0 +1,34 @@
+{
+  "name": "sunsetblog",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "~4.8.6",
+    "body-parser": "~1.6.6",
+    "cookie-parser": "~1.3.2",
+    "morgan": "~1.2.3",
+    "serve-favicon": "~2.0.1",
+    "debug": "~1.0.4",
+    "jade": "~1.5.0",
+    "mysql": "~2.5.4",
+    "connect-multiparty": "~1.2.5",
+    "promise": "~6.0.1",
+    "node-watch": "~0.3.4"
+  },
+  "description": "夕阳的博客",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dodio/blog.git"
+  },
+  "author": "dodio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dodio/blog/issues"
+  },
+  "homepage": "https://github.com/dodio/blog"
+}
