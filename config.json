@@ -4,13 +4,10 @@
     "host"            : "localhost",
     "user"            : "sunsetcastle",
     "password"        : "ssunea006",
-    "host"            : "115.47.37.142",
-    "user"            : "sunset",
-    "password"        : "akweJLS*#94jl",
     "database"        : "blog"
   },
   "port":80,
-  "cookieSecret":"FJLKJowuw*&#(*&876",
+  "cookieSecret":"FJLKJow(*#&%*(&(*&(uw*&#(*&876",
   "config":{
     "pageSize":"5",
     "upload_dir":"public/upload"
