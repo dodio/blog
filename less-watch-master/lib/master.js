@@ -31,9 +31,9 @@ var proto = {
 
 var default = {
   lessDir:path.join(process.cwd(),"less"),
-  dest:"all",
+  dest:"all"
 
-  
+
 }
 function create(options){
 
