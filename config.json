@@ -2,12 +2,12 @@
   "db":{
     "connectionLimit" : 10,
     "host"            : "localhost",
-    "user"            : "sunsetcastle",
-    "password"        : "ssunea006",
-    "database"        : "blog"
+    "user"            : "",
+    "password"        : "",
+    "database"        : ""
   },
   "port":80,
-  "cookieSecret":"FJLKJow(*#&%*(&(*&(uw*&#(*&876",
+  "cookieSecret":"",
   "config":{
     "pageSize":"5",
     "upload_dir":"public/upload"
