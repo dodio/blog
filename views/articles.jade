@@ -6,7 +6,7 @@ each art in articles
       div.date.fl
         span.glyphicon.mr5.glyphicon-calendar
         - var date = new Date(art.date_create)
-        span #{date.getFullYear()}-#{date.getMonth()}-#{date.getDate()}
+        span #{date.getFullYear()}-#{date.getMonth()+1}-#{date.getDate()}
       if art.tags.length
         div.tags.fl
           span.glyphicon.glyphicon-th.mr5
