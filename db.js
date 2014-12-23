@@ -1,8 +1,6 @@
 var mysql = require("mysql");
 var Promise = require("promise");
 var pool = mysql.createPool(require("./config").db);
-
-
 var mydb = {
   query:function(sql){
     var p = new Promise(function(resolve,reject){
