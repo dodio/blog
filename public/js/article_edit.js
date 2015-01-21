@@ -38,7 +38,10 @@ $(function(){
                 $("#tip").html('<span class="label label-danger">'+ res.msg +'</span>');
                 return;
             }
-            window.aid = res.aid;
+            if(/add/i.test(url)){
+                window.location.href = "/home?action=edit&aid=" + res.aid;
+                return;
+            }
             $("#tip").html('<span class="label label-success">'+ res.msg +'</span>');
         },"JSON")
 
@@ -61,7 +64,6 @@ $(function(){
             }
             var tag = res.data;
             $(".chose-tag").append('<a href="javascript:" data-tag="'+ tag +'"  class="btn btn-default">'+ tags +'</a>');
-
             addRel(tag);
         })
     })
